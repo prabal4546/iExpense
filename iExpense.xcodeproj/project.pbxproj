@@ -13,6 +13,7 @@
 		9115CB53251B2468009B9529 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9115CB52251B2468009B9529 /* Preview Assets.xcassets */; };
 		9115CB5E251B2469009B9529 /* iExpenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115CB5D251B2469009B9529 /* iExpenseTests.swift */; };
 		9115CB69251B2469009B9529 /* iExpenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115CB68251B2469009B9529 /* iExpenseUITests.swift */; };
+		9115CBB4251CB462009B9529 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115CBB3251CB462009B9529 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9115CB64251B2469009B9529 /* iExpenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iExpenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9115CB68251B2469009B9529 /* iExpenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseUITests.swift; sourceTree = "<group>"; };
 		9115CB6A251B2469009B9529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9115CBB3251CB462009B9529 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				9115CB4B251B2462009B9529 /* iExpenseApp.swift */,
 				9115CB4D251B2462009B9529 /* ContentView.swift */,
+				9115CBB3251CB462009B9529 /* AddView.swift */,
 				9115CB4F251B2468009B9529 /* Assets.xcassets */,
 				9115CB54251B2468009B9529 /* Info.plist */,
 				9115CB51251B2468009B9529 /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				9115CB4E251B2462009B9529 /* ContentView.swift in Sources */,
 				9115CB4C251B2462009B9529 /* iExpenseApp.swift in Sources */,
+				9115CBB4251CB462009B9529 /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
