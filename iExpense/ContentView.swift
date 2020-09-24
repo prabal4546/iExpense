@@ -14,6 +14,7 @@ struct ExpenseItem:Identifiable, Codable{
     let amount:Int
 }
 //array of expenseItem objects
+// @ObservedObject asks SwiftUI to watch the object for any changes
 class Expenses:ObservableObject{
     @Published var items = [ExpenseItem](){
     didSet{
@@ -35,12 +36,31 @@ class Expenses:ObservableObject{
         self.items = []
     }
 }
+//challenge2
+struct checkAmount:View{
+    var text:String
+    var amount:Double
+    var body: some View {
+           if amount < 10 {
+               return Text(text)
+                   .foregroundColor(.green)
+           } else if (amount > 10 && amount < 101) {
+               return Text(text)
+                   .foregroundColor(.orange)
+           } else {
+               // amount > 100
+               return Text(text)
+                   .foregroundColor(.red)
+           }
+       }
+}
 struct ContentView: View {
     @ObservedObject var expenses = Expenses()
     @State private var showingAddExpense = false
     
     
     var body: some View {
+        
         NavigationView{
             List{
                 ForEach(expenses.items){item in
@@ -52,7 +72,8 @@ struct ContentView: View {
                             
                         }
                         Spacer()
-                        Text("$\(item.amount)")
+                        checkAmount(text: "$\(item.amount)", amount: Double(item.amount))
+                        
                     }
                 }
                 .onDelete(perform: removeItems)
@@ -62,13 +83,14 @@ struct ContentView: View {
                 AddView(expenses: self.expenses)
             }
             .navigationBarTitle("iExpense")
-            .navigationBarItems(trailing:
+            .navigationBarItems(leading:EditButton(),trailing:
             Button(action:{
                 self.showingAddExpense = true
                     }){
                         Image(systemName: "plus")
                             }
             )
+           
             
         }
      
